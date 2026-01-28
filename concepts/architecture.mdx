@@ -1,13 +1,13 @@
 ---
 title: "Architecture"
-description: "Understanding the architecture of ReedAI Assistant"
+description: "Understanding the architecture of Artifact Chat"
 ---
 
-ReedAI Assistant is built with a modern frontend architecture focused on performance, scalability, and developer experience. This document explains the key components of the system.
+Artifact Chat is built with a modern frontend architecture focused on performance, scalability, and developer experience. This document explains the key components of the system.
 
 ## High-Level Overview
 
-ReedAI Assistant follows a client-centric architecture with AI processing via API services. The main components are:
+Artifact Chat follows a client-centric architecture with AI processing via API services. The main components are:
 
 ```mermaid
 graph TD
@@ -25,7 +25,7 @@ graph TD
 
 ### Frontend Architecture
 
-ReedAI Assistant is built with React and follows a component-based architecture:
+Artifact Chat is built with React and follows a component-based architecture:
 
 1. **React Components**: Modular UI components built with React
 2. **State Management**: Zustand for state management
@@ -47,7 +47,7 @@ The AI integration layer connects the frontend with large language models:
 
 ## Data Flow
 
-The typical data flow in ReedAI Assistant follows these steps:
+The typical data flow in Artifact Chat follows these steps:
 
 1. User input is captured through the UI
 2. Input is processed and formatted as a prompt
@@ -75,7 +75,7 @@ sequenceDiagram
 
 ## Technical Stack
 
-ReedAI Assistant uses the following technologies:
+Artifact Chat uses the following technologies:
 
 | Category           | Technologies              |
 | ------------------ | ------------------------- |
@@ -92,7 +92,7 @@ ReedAI Assistant uses the following technologies:
 
 ## Performance Optimizations
 
-ReedAI Assistant implements several performance optimizations:
+Artifact Chat implements several performance optimizations:
 
 1. **Component Memoization**: React.memo for expensive components
 2. **Lazy Loading**: Dynamic imports for code-splitting

@@ -15,6 +15,28 @@ description: "Learn how to use Artifact Chat's key features in minutes"
   This guide will walk you through the essential features of Artifact Chat to help you get started quickly.
 </Note>
 
+## Setting Up Your Project
+
+Organize your AI assistant environment:
+
+<Steps>
+  <Step title="Access Your Personal Project">
+    When you sign up, you automatically get a Personal Project. This is your private space for AI conversations.
+  </Step>
+
+  <Step title="Create Additional Projects (Optional)">
+    For team collaboration or separate work streams, create a new project from the project switcher in the sidebar.
+  </Step>
+
+  <Step title="Configure Project Instructions">
+    Add default instructions that apply to all conversations in the project, like "Always use formal language" or "Focus on technical accuracy."
+  </Step>
+
+  <Step title="Invite Team Members (Optional)">
+    For shared projects, invite team members and assign appropriate roles (Admin, Member, or Viewer).
+  </Step>
+</Steps>
+
 ## Using Assistants
 
 Artifact Chat offers powerful AI assistants that can help with a wide range of tasks:
@@ -23,19 +45,54 @@ Artifact Chat offers powerful AI assistants that can help with a wide range of t
   <Step title="Select an Assistant">
     Choose from the pre-configured assistants or create your own custom assistant to match your specific needs.
   </Step>
-  
+
   <Step title="Start a Conversation">
     Begin a new conversation thread by typing your question or request in the chat input field.
   </Step>
-  
+
   <Step title="Review Responses">
     The assistant will respond with helpful information, often using various tools to enhance its capabilities.
   </Step>
-  
+
   <Step title="Follow Up">
     Continue the conversation naturally with follow-up questions. The assistant maintains context throughout the thread.
   </Step>
 </Steps>
+
+## Using the Canvas System
+
+Create and edit content interactively:
+
+<Steps>
+  <Step title="Generate Content">
+    Ask the assistant to create code, documents, data, or web pages. For example: "Create a React component for a login form."
+  </Step>
+
+  <Step title="Canvas Opens Automatically">
+    When the assistant generates substantial content, it automatically opens in the appropriate canvas (Code, Text, Spreadsheet, or HTML).
+  </Step>
+
+  <Step title="Edit Interactively">
+    Make changes directly in the canvas. You can also ask the assistant to modify specific parts: "Add form validation to the email field."
+  </Step>
+
+  <Step title="Use Version History">
+    Track your changes with automatic version history. Rollback to any previous version if needed.
+  </Step>
+
+  <Step title="Export Your Work">
+    Export canvas content in multiple formats (PDF, DOCX, Markdown, CSV) or share directly with others.
+  </Step>
+</Steps>
+
+### Canvas Quick Reference
+
+| Request Type | Canvas Used |
+|--------------|-------------|
+| "Write code for..." | Code Canvas |
+| "Create a document about..." | Text Canvas |
+| "Generate a spreadsheet of..." | Spreadsheet Canvas |
+| "Build a web page..." | HTML Canvas |
 
 ## Working with Tools
 
@@ -45,15 +102,15 @@ Tools extend your assistant's capabilities for specialized tasks:
   <Step title="Understand Available Tools">
     Explore the tool library to understand what capabilities are available, from web search to image generation.
   </Step>
-  
+
   <Step title="Request Tool Use">
     You can explicitly ask the assistant to use specific tools: "Search the web for recent AI developments" or "Generate an image of a futuristic city."
   </Step>
-  
+
   <Step title="Automatic Tool Selection">
     Often, assistants will automatically select appropriate tools based on your request, without requiring explicit instructions.
   </Step>
-  
+
   <Step title="Review Tool Outputs">
     The assistant will incorporate tool results directly into its responses, providing sources when appropriate.
   </Step>
@@ -67,19 +124,19 @@ Tailor assistants to your specific needs:
   <Step title="Navigate to Assistant Settings">
     Click "Create New Assistant" from the dashboard.
   </Step>
-  
+
   <Step title="Configure Basic Details">
     Set a name, description, and select the AI model that best suits your use case.
   </Step>
-  
+
   <Step title="Craft Your System Prompt">
     Write instructions that define the assistant's role, expertise, and communication style.
   </Step>
-  
+
   <Step title="Attach Relevant Tools">
     Select tools that enhance the assistant's ability to help with your specific tasks.
   </Step>
-  
+
   <Step title="Save and Start Using">
     Save your configuration and start a new conversation with your custom assistant.
   </Step>
@@ -93,21 +150,30 @@ Organize your work effectively:
   <Step title="Create New Threads">
     Start new conversation threads for distinct topics or projects.
   </Step>
-  
+
   <Step title="Name Your Threads">
     Give descriptive names to threads to easily find them later.
   </Step>
-  
+
   <Step title="Resume Existing Threads">
     Return to previous conversations to continue where you left off.
   </Step>
-  
-  <Step title="Archive Completed Threads">
-    Keep your workspace organized by archiving threads you no longer need.
+
+  <Step title="Delete Completed Threads">
+    Keep your project organized by deleting threads you no longer need.
   </Step>
 </Steps>
 
 ## Key Features Overview
+
+### Canvas System
+
+Create and edit content interactively:
+
+- **Text Canvas**: Rich documents with markdown support
+- **Code Canvas**: Syntax highlighting and live preview
+- **Spreadsheet Canvas**: Data manipulation up to 1000 rows
+- **HTML Canvas**: Web development with real-time preview
 
 ### AI Assistants
 
@@ -126,11 +192,14 @@ Access a comprehensive library of tools:
 - **Image Tools**: Generate and analyze images
 - **Data Tools**: Create charts, CSVs, and PDFs
 - **Code Tools**: Interpret code and analyze files
-- **Many more**: Email management, GitHub integration, document processing
+- **Many more**: Email management, integrations, document processing
 
 <CardGroup>
-  <Card title="Model Selection" icon="robot" href="/guides/customizing-assistants#model-selection">
-    Learn about the different AI models available
+  <Card title="Canvas System" icon="paint-brush" href="/concepts/canvas-system">
+    Learn about interactive content editing
+  </Card>
+  <Card title="Projects" icon="folder" href="/concepts/projects">
+    Organize your work with collaborative projects
   </Card>
   <Card
     title="Tool Library"
@@ -138,9 +207,6 @@ Access a comprehensive library of tools:
     href="/concepts/tools"
   >
     Explore all available tools and their capabilities
-  </Card>
-  <Card title="Assistant Templates" icon="clone" href="/templates/lead-generator">
-    Start with ready-to-use assistant templates
   </Card>
   <Card title="Conversation Threading" icon="comments" href="/concepts/threading">
     Learn how to organize your conversations effectively

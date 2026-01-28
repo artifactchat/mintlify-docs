@@ -1,0 +1,200 @@
+---
+title: "Projects"
+description: "Organize your work with collaborative projects"
+---
+
+Projects in Artifact Chat provide a powerful way to organize your AI conversations, assistants, and content. Whether you're working solo or with a team, projects help keep your work structured and accessible.
+
+## What is a Project?
+
+A project is a dedicated environment that contains:
+
+- **Threads**: Conversation histories with AI assistants
+- **Assistants**: Custom AI configurations for specific tasks
+- **Files**: Uploaded documents and resources
+- **Settings**: Project-specific configurations
+
+<Note>
+  Every user has a Personal Project by default. You can create additional projects for different work streams or teams.
+</Note>
+
+## Project Types
+
+### Personal Project
+
+Your Personal Project is created automatically when you sign up:
+
+- **Private by Default**: Only you can access it
+- **Always Available**: Can't be deleted
+- **Personal Settings**: Your preferences and configurations
+
+### Shared Projects
+
+Create shared projects for team collaboration:
+
+- **Team Access**: Invite team members
+- **Role-Based Permissions**: Control who can do what
+- **Shared Resources**: Assistants and files accessible to all members
+
+## Creating a Project
+
+To create a new project:
+
+1. Click on the project switcher in the sidebar
+2. Select "Create Project"
+3. Enter project details:
+   - **Name**: Up to 100 characters
+   - **Description**: Up to 500 characters (optional)
+   - **Instructions**: Default context for AI conversations (up to 1500 characters)
+
+```jsx
+// Example project configuration
+{
+  name: "Marketing Campaigns",
+  description: "AI assistants for marketing campaigns",
+  instructions: "Focus on brand voice and target audience engagement"
+}
+```
+
+## Project Features
+
+### Project-Scoped Content
+
+Content in projects is organized and scoped:
+
+| Content Type | Scope |
+|--------------|-------|
+| Threads | Per project |
+| Custom Assistants | Per project |
+| Uploaded Files | Per project |
+| Settings | Per project |
+
+### Customization Options
+
+Personalize your project appearance:
+
+- **Custom Icons**: Choose from a library of icons
+- **Color Themes**: Set project-specific colors
+- **Display Name**: Customize how the project appears
+
+### Project Instructions
+
+Set default instructions that apply to all conversations:
+
+```
+Example instructions:
+- Always use formal language
+- Focus on technical accuracy
+- Include code examples when relevant
+```
+
+<Warning>
+  Project instructions are prepended to all conversations. Keep them concise to preserve context window space.
+</Warning>
+
+## Team Collaboration
+
+### Inviting Team Members
+
+Share your project with team members:
+
+1. Open project settings
+2. Navigate to "Team Members"
+3. Enter email addresses to invite
+4. Assign appropriate roles
+
+### Role-Based Access Control (RBAC)
+
+Artifact Chat supports different permission levels:
+
+| Role | Permissions |
+|------|-------------|
+| Owner | Full control, can delete project |
+| Admin | Manage members, settings, and content |
+| Member | Create and edit content |
+| Viewer | Read-only access |
+
+### Project Switcher
+
+Quickly switch between projects:
+
+- Use the project switcher dropdown in the sidebar
+- Keyboard shortcut: `Cmd/Ctrl + K` then type project name
+- Recent projects appear at the top
+
+## Managing Projects
+
+### Project Settings
+
+Access project settings to:
+
+- Update name and description
+- Modify default instructions
+- Manage team members
+- Configure integrations
+
+### Archiving Projects
+
+Archive projects you no longer actively use:
+
+- Archived projects are hidden from the main view
+- Content is preserved and can be restored
+- Reduces clutter in your project list
+
+### Deleting Projects
+
+<Warning>
+  Deleting a project permanently removes all its content including threads, assistants, and files. This action cannot be undone.
+</Warning>
+
+To delete a project:
+
+1. Open project settings
+2. Scroll to "Danger Zone"
+3. Click "Delete Project"
+4. Confirm deletion
+
+## Best Practices
+
+### Project Organization
+
+1. **One Focus Per Project**: Keep contexts focused
+2. **Clear Naming**: Use descriptive project names
+3. **Document Instructions**: Write clear project instructions
+4. **Regular Cleanup**: Archive inactive projects
+
+### Team Collaboration
+
+1. **Define Roles Early**: Set up RBAC before inviting members
+2. **Share Assistants**: Create project assistants for common tasks
+3. **Use Descriptions**: Help team members understand project purpose
+4. **Monitor Activity**: Review project usage periodically
+
+### Content Management
+
+1. **Organize Threads**: Use descriptive thread names
+2. **Clean Up Old Threads**: Delete completed conversations
+3. **Share Important Findings**: Export and share valuable AI responses
+
+## Project Limits
+
+| Feature | Limit |
+|---------|-------|
+| Project Name | 100 characters |
+| Description | 500 characters |
+| Instructions | 1500 characters |
+| Team Members | Plan dependent |
+
+## Next Steps
+
+<CardGroup>
+  <Card title="Canvas System" icon="paint-brush" href="/concepts/canvas-system">
+    Learn about interactive content editing
+  </Card>
+  <Card title="Threading" icon="comments" href="/concepts/threading">
+    Understand conversation organization
+  </Card>
+  <Card title="Customizing Assistants" icon="robot" href="/guides/customizing-assistants">
+    Create specialized AI assistants
+  </Card>
+</CardGroup>

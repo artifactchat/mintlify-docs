@@ -19,14 +19,15 @@
   },
   "topbarLinks": [
     {
-      "name": "GitHub",
-      "url": "https://github.com/yourusername/artifact-chat"
+      "name": "Main App",
+      "url": "https://artifact.chat"
     }
   ],
   "topbarCtaButton": {
     "name": "Get Started",
     "url": "https://artifact.chat"
   },
+  "domain": "docs.artifact.chat",
   "anchors": [
     {
       "name": "Concepts",
@@ -48,14 +49,19 @@
       "group": "Core Concepts",
       "pages": [
         "concepts/architecture",
-        "concepts/tools"
+        "concepts/canvas-system",
+        "concepts/tools",
+        "concepts/threading",
+        "concepts/projects",
+        "concepts/ai-agents"
       ]
     },
     {
       "group": "Guides",
       "pages": [
         "guides/customizing-assistants",
-        "guides/customizing-tools"
+        "guides/customizing-tools",
+        "guides/error-handling"
       ]
     },
     {
@@ -65,10 +71,15 @@
         "guides/assistants/research-assistant",
         "guides/assistants/content-creator"
       ]
+    },
+    {
+      "group": "Components",
+      "pages": [
+        "components/chat-interface"
+      ]
     }
   ],
   "footerSocials": {
-    "github": "https://github.com/yourusername/artifact-chat",
     "x": "https://twitter.com/artifactchat",
     "linkedin": "https://www.linkedin.com/company/artifact-chat"
   },

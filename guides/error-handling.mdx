@@ -1,0 +1,193 @@
+---
+title: "Error Handling"
+description: "Understanding how Artifact Chat displays and handles errors"
+---
+
+Artifact Chat uses a conversational approach to error handling, displaying errors as part of the natural conversation flow rather than disruptive alerts. This design pattern, often called the "Claude pattern," is used by leading AI assistants like ChatGPT, Gemini, and Claude.
+
+## Error Display Philosophy
+
+When an AI streaming error occurs, Artifact Chat displays it as an assistant message bubble in the conversation. This approach:
+
+- **Feels Conversational**: The error is part of the dialogue, not a system interruption
+- **Preserves Context**: You see your query and the error response together
+- **Less Alarming**: Errors feel like "I couldn't help with that" vs. "SYSTEM ERROR"
+- **Natural Retry UX**: The retry button appears inline, like continuing the conversation
+
+<Note>
+  This approach mimics how a helpful assistant would naturally communicate when something goes wrong.
+</Note>
+
+## Error Types
+
+Artifact Chat categorizes errors into four main types:
+
+### Network Errors
+
+Connection issues, server unreachable, or timeouts.
+
+| Indicator | Color |
+|-----------|-------|
+| Icon | Red exclamation |
+| Background | Light red/pink |
+
+**Common Causes**:
+- Internet connection issues
+- Server temporarily unavailable
+- Request timeout
+
+**User Message**: "I wasn't able to complete this response. Please check your connection and try again."
+
+### Rate Limit Errors
+
+Too many requests or quota exceeded.
+
+| Indicator | Color |
+|-----------|-------|
+| Icon | Blue clock |
+| Background | Light blue |
+
+**Common Causes**:
+- Exceeded API rate limits
+- Usage quota reached
+- Too many concurrent requests
+
+**User Message**: "I'm receiving too many requests right now. Please wait a moment and try again."
+
+### Safety Errors
+
+Content policy violations or safety filter triggers.
+
+| Indicator | Color |
+|-----------|-------|
+| Icon | Yellow warning |
+| Background | Light yellow |
+
+**Common Causes**:
+- Content policy violation
+- Safety filter triggered
+- Inappropriate request
+
+**User Message**: "I wasn't able to respond to that request. Please rephrase your question."
+
+### General Errors
+
+Unknown or uncategorized errors.
+
+| Indicator | Color |
+|-----------|-------|
+| Icon | Red alert |
+| Background | Light red |
+
+**Common Causes**:
+- Unexpected server error
+- Unknown issue
+
+**User Message**: "Something went wrong. Please try again."
+
+## Retry Logic
+
+Artifact Chat automatically determines whether an error is retryable:
+
+### Retryable Errors
+
+These errors can typically be resolved by trying again:
+
+- Network connectivity issues
+- Timeout errors
+- Server 5xx errors
+- Temporary service disruptions
+
+When an error is retryable, a **Retry** button appears in the error message.
+
+### Non-Retryable Errors
+
+These errors require different action:
+
+- Rate limits (wait before retrying)
+- Authentication errors (check credentials)
+- Content policy violations (modify request)
+
+For non-retryable errors, no retry button is shown. Instead, guidance is provided on what action to take.
+
+## User-Friendly Messages
+
+All error messages shown to users are non-technical and helpful:
+
+| Technical Error | User-Friendly Message |
+|-----------------|----------------------|
+| `ECONNREFUSED` | "I'm having trouble connecting. Please check your internet connection." |
+| `429 Too Many Requests` | "I'm receiving too many requests right now. Please wait a moment." |
+| `500 Internal Server Error` | "Something went wrong on my end. Please try again." |
+| `Content filtered` | "I wasn't able to respond to that request. Please rephrase your question." |
+
+## Handling Errors as a User
+
+When you encounter an error:
+
+### For Network Errors
+
+1. Check your internet connection
+2. Wait a few seconds
+3. Click the **Retry** button
+
+### For Rate Limit Errors
+
+1. Wait for the suggested cooldown period
+2. Reduce request frequency
+3. Try again after waiting
+
+### For Safety Errors
+
+1. Review your request
+2. Rephrase to avoid potentially problematic content
+3. Submit a new request
+
+### For General Errors
+
+1. Try the request again
+2. If it persists, try a different approach
+3. Report the issue if it continues
+
+## Error Recovery Tips
+
+<CardGroup cols={2}>
+  <Card title="Refresh the Page" icon="rotate">
+    A page refresh can resolve temporary state issues
+  </Card>
+  <Card title="Check Connection" icon="wifi">
+    Ensure you have a stable internet connection
+  </Card>
+  <Card title="Wait and Retry" icon="clock">
+    Many errors resolve with a brief wait
+  </Card>
+  <Card title="Simplify Request" icon="compress">
+    Try a simpler or shorter request
+  </Card>
+</CardGroup>
+
+## Best Practices
+
+1. **Don't Panic**: Most errors are temporary and resolve quickly
+2. **Read the Message**: Error messages provide guidance on what to do
+3. **Use Retry When Available**: The retry button handles everything automatically
+4. **Wait for Rate Limits**: Respect rate limit cooldowns to avoid extended delays
+5. **Rephrase if Needed**: Safety errors often just need a different approach
+
+<Warning>
+  If you repeatedly encounter the same error, there may be an underlying issue. Try logging out and back in, or contact support if the problem persists.
+</Warning>
+
+## Next Steps
+
+<CardGroup>
+  <Card title="Canvas System" icon="paint-brush" href="/concepts/canvas-system">
+    Learn about interactive content editing
+  </Card>
+  <Card title="Threading" icon="comments" href="/concepts/threading">
+    Understand conversation organization
+  </Card>
+  <Card title="Quickstart" icon="rocket" href="/quickstart">
+    Get started with Artifact Chat
+  </Card>
+</CardGroup>
